@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import { INCREMENT, DECREMENT } from '../actions'
-import counter, { initialState} from '../reducers/counter'
+import counter, { initialState } from '../reducers/counter'
 import CounterChild from './CounterChild'
 import CounterContext from '../contexts/counter'
 
