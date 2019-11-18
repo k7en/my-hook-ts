@@ -1,18 +1,11 @@
 import { createContext } from 'react';
-import {IState} from '../reducers/counter'
+import { IState } from '../reducers/counter'
 
 export interface IContextProps {
-    state: IState
-    dispatch:({type}:{type:string}) => void;
+  state: IState
+  dispatch: ({ type }: { type: string }) => void;
 }
 
 const CounterContext = createContext({} as IContextProps)
 
 export default CounterContext
-
-// interface IContextProps {
-//     state: IState;
-//     dispatch: ({type}:{type:string}) => void;
-//   }
-  
-//   export const AdminStore = React.createContext({} as IContextProps);
