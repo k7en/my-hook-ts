@@ -9,3 +9,10 @@ export interface IContextProps {
 const CounterContext = createContext({} as IContextProps)
 
 export default CounterContext
+
+// interface IContextProps {
+//     state: IState;
+//     dispatch: ({type}:{type:string}) => void;
+//   }
+  
+//   export const AdminStore = React.createContext({} as IContextProps);

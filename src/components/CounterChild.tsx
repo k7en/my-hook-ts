@@ -1,14 +1,14 @@
 import React from 'react'
 import { INCREMENT, DECREMENT } from '../actions'
-import { AdminStore } from './Counter'
+import CounterContext from '../contexts/counter'
 
 const CounterChild: React.FC = () => {
-  const cnt = React.useContext(AdminStore)
+  const cnt = React.useContext(CounterContext)
   return (
     <>
-      CounterChild:{cnt.state.count}
-      <button onClick={() => cnt.dispatch({ type: DECREMENT })}>child -</button>
-      <button onClick={() => cnt.dispatch({ type: INCREMENT })}>child +</button>
+      Child Counter:{cnt.state.count}
+      <button onClick={() => cnt.dispatch({ type: DECREMENT })}> -</button>
+      <button onClick={() => cnt.dispatch({ type: INCREMENT })}> +</button>
     </>
   );
 }
