@@ -1,9 +1,15 @@
 import { INCREMENT, DECREMENT } from '../actions'
 
 export interface IState{
-  count: any
+  count: number
 }
-function counter(state: any, action: any) {
+export type Action =
+  | { type: 'INCREMENT' }
+  | { type: 'DECREMENT' };
+
+  // | { type: 'incrementAmount'; amount: number };
+
+const counter = (state:IState, action:any) => {
   console.log(action.type)
   switch (action.type) {
     case INCREMENT:
